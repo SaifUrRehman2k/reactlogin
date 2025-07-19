@@ -1,0 +1,23 @@
+button {
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    margin: 0em auto;
+}
+.holo {
+    border: 1px solid rgba(85, 106, 224, 0.938);
+    color: rgb(70, 70, 70) !important;
+}
+.holo:hover {
+    background-color: rgba(85, 106, 224, 0.938);
+    color: rgb(207, 207, 207) !important;
+    cursor: pointer;
+}
+.solid {
+    background-color: rgba(85, 106, 224, 0.938);
+}
+.solid:hover {
+    background-color: rgba(154, 169, 255, 0.486);
+    color: rgb(88, 88, 88) !important;
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+.loginSection {
+  width: 28em;
+  height: 30em;
+  border: 1px solid rgba(138, 155, 248, 0.938);
+  border-radius: 0.5em;
+  margin: 5em auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  justify-content: space-around;
+}
+.btns {
+  margin: 0em auto;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1em;
+}

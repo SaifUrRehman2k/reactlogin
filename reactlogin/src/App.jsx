@@ -47,17 +47,20 @@ function App() {
     <>
       <Header logo='Blinq' links={navLinks} />
       <div className='loginSection'>
+      <p className='loginLine'>Sign in to continue. </p>
+
         <div className='inputs'>
           {/* <Input type='text' placeHolder='Name' inputID='NAME' inputName='Name' /> */}
           <Input type='email' placeHolder='jondoe23@gmailcom' inputID='EMAIL' inputName='E-mail' updatedVal={updateEmailValue} />
           <Input type='password' placeHolder='Password' inputID='PASS' inputName='Password' updatedVal={updatePasswordValue} />
+          <a href="#" className='forgetBtn'>Forget password</a>
         </div>
 
         <div className='btns'>
-          <Button title='Login' btnClass='solid' btnFucntiion={validateLogin} />
-          <Button title='Create account' btnClass='holo' />
+          <Button title='Login' btnClass='login' btnFucntiion={validateLogin} />
+          {/* <Button title='Create account' btnClass='holo' /> */}
         </div>
-        {message}
+        <div className='messageArea'>{message}</div>
 
         {/* {isVerified !== null && (
           <p>{isVerified ? 'Verified' : 'not Verified'} </p>

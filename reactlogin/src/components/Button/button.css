@@ -21,3 +21,14 @@ button {
     color: rgb(88, 88, 88) !important;
     cursor: pointer;
 }
+.login {
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(85, 106, 224, 0.938);
+    margin: 0em auto;
+    color: rgb(238, 236, 236);
+}
+.login:hover {
+    background-color: rgba(89, 109, 224, 0.671);
+    cursor: pointer;
+}

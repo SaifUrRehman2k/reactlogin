@@ -1,6 +1,18 @@
+* {
+  color: rgb(56, 56, 56);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+}
+.loginLine {
+  width: 60%;
+  padding: 1.5em 0em;
+  margin: 0em auto;
+}
 .loginSection {
   width: 28em;
-  height: 20em;
+  height: 22em;
   border: 1px solid rgba(138, 155, 248, 0.938);
   border-radius: 0.5em;
   margin: 5em auto;
@@ -9,15 +21,27 @@
   align-items: start;
   justify-content: space-around;
 }
+.messageArea {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  height: 2em;
+}
+.forgetBtn {
+  font-size: 0.6em;
+  align-self: flex-end;
+}
 .btns {
+  width: 60%;
   margin: 0em auto;
   display: flex;
   flex-flow: row nowrap;
   gap: 1em;
 }
 .inputs {
-  width: 100%;
-  height: 50%;
+  margin: 0em auto 2em auto;
+  width: 60%;
+  height: 8em;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -25,4 +49,12 @@
 }
 p{
   color: black !important;
+}
+@media (max-width: 500px) {
+  .loginSection {
+    width: 80%;
+  }
+  .loginSection >* {
+      width: 80%;
+    }
 }

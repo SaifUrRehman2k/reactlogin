@@ -4,6 +4,9 @@
   padding: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+p,h1,h2,h3,a,input {
+  color: rgb(51, 50, 50);
+}
 ul.navLinks {
   list-style: none;
   display: flex;
@@ -14,4 +17,20 @@ ul.navLinks {
 a {
   text-decoration: none;
   color: black;
+}
+.error {
+  color: rgb(151, 21, 21) !important;
+  background-color: rgb(219, 80, 80);
+  border: 1px solid rgb(226, 3, 3);
+}
+.success {
+  color: rgb(83 95 247)  !important;
+  background-color: rgb(111 205 231);
+  border: 1px solid rgb(2 86 143);
+}
+.message {
+  padding: 0.5em 1em;
+  width: 90%;
+  margin: auto;
+  box-sizing: border-box;
 }

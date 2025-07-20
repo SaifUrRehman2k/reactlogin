@@ -7,24 +7,39 @@ import Input from './components/Input'
 function App() {
   let navLinks = ['Home', 'About', 'Contact']
 
-  // const person1 = {
-  //   name: 'john',
-  //   email: 'john@gmail.com',
-  //   password: 'admin123'
-  // }
-  const [inputValue, setInputValue] = useState('')
-  const [isVerified, setIsVerified] = useState(null)
+  const users = [{
+    email: 'john@gmail.com',
+    password: 'admin123'
+  }, {
+    email: 'claud@gmail.com',
+    password: 'wow25'
+  }, {
+    email: 'saif@gmail.com',
+    password: 'secret55'
+  }
+  ]
+  const [emailValue, setEmailValue] = useState('')
+  const [password, setPassword] = useState('')
+  const [message, setMessage] = useState('')
 
-  const pass = 'admin'
+  // const pass = 'admin'
 
-const updateValue = (e) => {
-  setInputValue(e.target.value)
-}
+  const updateEmailValue = (e) => {
+    setEmailValue(e.target.value)
+  }
+  const updatePasswordValue = (e) => {
+    setPassword(e.target.value)
+  }
 
-const validateLogin = (e) => {
-  e.preventDefault();
-  setIsVerified(inputValue === pass)
-}
+  const validateLogin = (e) => {
+    e.preventDefault();
+    const userFound = users.find(user => user.email === emailValue && user.password === password )
+    if (userFound) {
+      setMessage(<p className='success message'>Login Successful</p>)
+    } else {
+      setMessage(<p className='error message'>Login Failed, Please check the Email and Password</p>)
+    }
+  }
 
 
 
@@ -33,19 +48,20 @@ const validateLogin = (e) => {
       <Header logo='Blinq' links={navLinks} />
       <div className='loginSection'>
         <div className='inputs'>
-          {/* <Input type='text' placeHolder='Name' inputID='NAME' inputName='Name' />
-          <Input type='email' placeHolder='jondoe23@gmail.com' inputID='EMAIL' inputName='E-mail' /> */}
-          <Input type='password' placeHolder='Password' inputID='PASS' inputName='Password' updatedVal={updateValue}/>
+          {/* <Input type='text' placeHolder='Name' inputID='NAME' inputName='Name' /> */}
+          <Input type='email' placeHolder='jondoe23@gmailcom' inputID='EMAIL' inputName='E-mail' updatedVal={updateEmailValue} />
+          <Input type='password' placeHolder='Password' inputID='PASS' inputName='Password' updatedVal={updatePasswordValue} />
         </div>
 
         <div className='btns'>
           <Button title='Login' btnClass='solid' btnFucntiion={validateLogin} />
           <Button title='Create account' btnClass='holo' />
         </div>
+        {message}
 
-            {isVerified !== null && (
-              <p>{isVerified ? 'Verified' : 'not Verified'} </p> 
-              ) }
+        {/* {isVerified !== null && (
+          <p>{isVerified ? 'Verified' : 'not Verified'} </p>
+        )} */}
 
 
       </div>

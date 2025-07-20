@@ -4,7 +4,7 @@ function Input(props) {
     return (
         <div className='input'>  
             <label htmlFor={props.inputID}>{props.inputName}</label>
-            <input type={props.inputType} placeholder={props.placeHolder} id={props.inputID}/>
+            <input type={props.inputType} placeholder={props.placeHolder} id={props.inputID} onChange={props.updatedVal}/>
         </div>
     )
 }

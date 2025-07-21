@@ -18,3 +18,11 @@ div.input {
     align-items: start;
     justify-content: center;
 }
+@media (max-width: 500px) {
+    label {
+        font-size: 0.5em !important;
+    }
+    input {
+        font-size: 0.7em;
+    }
+}
